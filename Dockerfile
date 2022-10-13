@@ -37,5 +37,6 @@ RUN addgroup --gid 1001 --system pheme && \
     adduser --no-create-home --shell /bin/false --disabled-password --uid 1001 --system --group pheme
 
 COPY --from=builder /source/dist/* /pheme/
+COPY . /pheme/
 
-RUN python3 -m pip install /pheme/*
+RUN python3 -m pip install /pheme/*.whl

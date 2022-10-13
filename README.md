@@ -62,6 +62,18 @@ Validate the activated git hooks by running
 
     poetry run autohooks check
 
+## docker-compose Usage:
+Build from the Dockerfile with docker-compose.
+
+```
+docker-compose build .
+```
+Run the server with the following command:
+```
+docker-compose up -d
+```
+You should see a server running on `http://localhost:8000`
+
 ## Usage
 
 In order to prepare the data structure the XML report data needs to be posted to `pheme` with a grouping indicator (either by host or nvt).
